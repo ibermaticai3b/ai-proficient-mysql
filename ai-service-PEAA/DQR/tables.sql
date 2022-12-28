@@ -1,6 +1,6 @@
 USE `results_db`;
-DROP TABLE IF EXISTS `QAT_report`;
-CREATE TABLE `QAT_report` (
+DROP TABLE IF EXISTS `DQR_report`;
+CREATE TABLE `DQR_report` (
 	`id` INT NOT NULL AUTO_INCREMENT,
     `ts_start_run` TIMESTAMP NOT NULL,
 	`ts_end_run` TIMESTAMP NULL,
@@ -9,10 +9,10 @@ CREATE TABLE `QAT_report` (
 );
 
 USE `results_db`;
-DROP TABLE IF EXISTS `QAT_report_variable`;
-CREATE TABLE `QAT_report_variable` (
+DROP TABLE IF EXISTS `DQR_report_variable`;
+CREATE TABLE `DQR_report_variable` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`qat_report_id` INT NOT NULL,
+	`dqr_report_id` INT NOT NULL,
     `variable` NVARCHAR(1024) NULL,
 	`distinct` BIGINT NULL,
     `distinct_percentage` DECIMAL(3,2) NULL,
